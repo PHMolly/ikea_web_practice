@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/* reset.css 重置了了各個瀏覽器的樣式設定
+ http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;/* 調整盒內尺寸 */
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Eric Meyer 的版本 END */
+
+/* header區 */
+header{
+    height:50px;
+    display: flex;
+    padding: 10px;
+    
+}
+header h1{
+    width: 10%;
+}
+nav{
+    width: 90%;
+}
+nav ul{
+    display: flex;
+}
+nav li{
+    position: relative;
+    flex:1;/* 扣除間距 剩下均分比例 */
+    height: 50px;
+    border-right: solid 1px #666;
+}
+nav li:last-child{/* 移除最後一個項目的右邊框線 */
+    border-right: none;
+}
+nav a{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: #666;
+}
+nav div{
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 70px;/* header高度加padding上下10 */
+    left: 0;
+    z-index: 99999;
+    background-color: rgba(252, 252, 252,.7);
+}
+nav div a{
+    border-bottom: dotted 1px #666;
+}
+/* jQuery UI Tabs */
+#tabs>div{
+    display: flex;
+}
+#tabs>div>div{
+    flex: 1;
+}
+.ui-tabs img{
+    width: 100%;
+}
+.ui-tabs{/* 改整體寬度 */
+    width: 80%;
+    margin: 20px auto;
+}
+.ui-tabs .ui-tabs-nav li{/* 改頁籤寬度 */    
+    margin: 0;
+    width: 20%;
+    border-bottom-width: 1px;
+    border-radius: 3px;
+}
+.ui-widget-header {
+    border: none;
+    background: transparent;/* 背景移除 */
+}
+/* 頁籤作用的顏色 */
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+    border:1px solid #666;
+    background: rgba(255, 176, 119, 0.541);
+}
+/* 頁籤預設的顏色 */
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+    background: #fff;
+}
+.price{
+    display: inline-block;/* 與內容同寬 */
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 1.3rem;
+    background-color: #F9D615;
+    box-shadow: 5px 5px 0 red;
+}
+
+small{
+    display: block;
+}
